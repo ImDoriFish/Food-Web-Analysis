@@ -1,12 +1,3 @@
-/*-------------------------------------------
-Program: Food Web 
-	Build and analyzes a pred/prey food web using dynamic memory. Users enter organism names, then enter pred/prey
-    index pairs to create relation.
-    It also prints characteristics of the web
-Course: CS 211, Spring 2026, UIC
-Author: Khang Bao Le
-------------------------------------------- */
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -87,7 +78,7 @@ bool addRelationToWeb(Org* web, int numOrgs, int predInd, int preyInd) {
         web[predInd].prey = (int*)malloc(sizeof(int)*1);
         web[predInd].prey[0] = preyInd;
         web[predInd].numPrey = 1;
-    //Case 2: If ppredator already has at least 1 prey
+    //Case 2: If predator already has at least 1 prey
     } else{
         int* newPrey = (int*)malloc(sizeof(int)*(web[predInd].numPrey + 1));
 
